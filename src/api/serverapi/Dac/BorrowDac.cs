@@ -45,5 +45,10 @@ namespace serverapi.Dac
         {
             Collection.ReplaceOne(it => it.Id == document.Id, document);
         }
+
+        public void Remove(Borrow document)
+        {
+            Collection.DeleteOne(it => it.Id == document.Id);
+        }
     }
 }
