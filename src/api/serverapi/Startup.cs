@@ -33,6 +33,7 @@ namespace serverapi
             services.AddTransient<DatabaseConfigurations>(svc => dbConfig);
             services.AddTransient<IItemDac, ItemDac>();
             services.AddTransient<ISlotDac, SlotDac>();
+            services.AddTransient<IBorrowDac, BorrowDac>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

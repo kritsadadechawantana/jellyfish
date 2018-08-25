@@ -13,5 +13,6 @@ namespace serverapi.Dac.Contract
         IEnumerable<Borrow> List(Expression<Func<Borrow, bool>> expression);
         void Create(Borrow document);
         void Update(Borrow document);
+        void Remove(Borrow document);
     }
 }
