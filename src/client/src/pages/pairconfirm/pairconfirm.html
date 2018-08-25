@@ -7,12 +7,27 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>pairconfirm</ion-title>
+    <ion-title>ยืนยัน</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+    <div class="form-group">
+        <ion-label color="primary" floating>ชื่อ</ion-label>
+        <ion-label color="primary" floating>{{item.name}}</ion-label>
+      </div>
+    <div class="form-group">
+        <ion-label color="primary" floating>ที่อยู่</ion-label>
+        <ion-label color="primary" floating>{{item.slot}}</ion-label>
+      </div>
+      <div class="form-group">
+          <ion-label color="primary" floating>ชื่อผู้ยืม</ion-label>
+          <ion-label color="primary" floating>{{item.owner}}</ion-label>
+      </div>
 
+  <div class="text-center">                
+      <button ion-button round (click)="confirm()">ยืนยัน</button>
+  </div>
 </ion-content>

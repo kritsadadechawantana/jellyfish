@@ -21,7 +21,7 @@
             </div>
           <ion-label>ที่อยู่</ion-label>
           <div class="form-group">
-            <select class="form-control" id="slot"  name="slot">            
+            <select class="form-control" id="slot"  name="slot" [(ngModel)]="item.slot">            
               <option *ngFor="let slot of slots" [value]="slot">{{slot}}</option>
             </select>
             </div>

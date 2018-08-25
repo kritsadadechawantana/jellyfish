@@ -16,7 +16,7 @@ import { ManagePage } from '../pages/manage/manage';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = LoginPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -25,10 +25,10 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'ยืม', component: HomePage },
-      { title: 'คืน', component: ReturnPage },
-      { title: 'จัดการ', component: ManagePage },
-      { title: 'Logout', component: LoginPage}
+      { title: 'ยืมอุปกรณ์', component: HomePage },
+      { title: 'คืนอุปกรณ์', component: ReturnPage },
+      { title: 'จัดการอุปกรณ์', component: ManagePage },
+      { title: 'ออกจากระบบ', component: LoginPage}
     ];
 
   }

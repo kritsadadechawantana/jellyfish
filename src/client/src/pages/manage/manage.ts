@@ -21,14 +21,9 @@ export class ManagePage {
   selectedItem: any;
   items: Item[];
   constructor(public navCtrl: NavController, public navParams: NavParams, private sharedService: SharedserviceProvider) {
-        // If we navigated to this page, we will have an item available as a nav param
-        this.selectedItem = navParams.get('item');
-        
-        // Let's populate this page with some filler content for funzies
-
+        this.selectedItem = navParams.get('item');      
         this.sharedService.getItems().then(item => 
-        {
-          console.log(item[0].name);
+        {          
             this.items = item
         });
   }
@@ -37,13 +32,17 @@ export class ManagePage {
   }
   itemTapped(event, item) {
     // That's right, we're pushing to ourselves!
-    this.navCtrl.push(DetailPage, {
-      item: item
-    });
+    this.navCtrl.push(DetailPage, item);
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ManagePage');
   }
 
+  ionViewWillEnter(){
+    this.sharedService.getItems().then(item => 
+      {        
+          this.items = item
+      });
+  }
 }

@@ -17,14 +17,14 @@ import { ManagePage } from '../manage/manage';
   templateUrl: 'add.html',
 })
 export class AddPage {
-  slots = ['1A', '1B', '1C'];
-  item : Item = new Item(0,"Name","1A",false,new Date());
+  slots = ['1A', '1B', '1C','2A', '2B', '2C','3A', '3B', '3C',];
+  item : Item = new Item("","Name","1A",false,new Date());
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private sharedService: SharedserviceProvider) {
   }
   
   onSubmit() {
-    this.sharedService.addItem(this.item).then(() => this.navCtrl.push(ManagePage));
+    this.sharedService.addItem(this.item).then(() => this.navCtrl.pop());
   }
 
 }

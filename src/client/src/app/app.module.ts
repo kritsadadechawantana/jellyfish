@@ -17,10 +17,12 @@ import { ReturnqrPage} from '../pages/returnqr/returnqr';
 import { ManagePage } from '../pages/manage/manage';
 import { DetailPage } from '../pages/detail/detail';
 import { EditPage } from '../pages/edit/edit';
+import { PairreturnPage } from '../pages/pairreturn/pairreturn'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { SharedserviceProvider } from '../providers/sharedservice/sharedservice';
+import { UserserviceProvider } from '../providers/userservice/userservice';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { SharedserviceProvider } from '../providers/sharedservice/sharedservice'
     ReturnqrPage,
     ManagePage,
     DetailPage,
-    EditPage
+    EditPage,
+    PairreturnPage
   ],
   imports: [
     BrowserModule,
@@ -56,14 +59,16 @@ import { SharedserviceProvider } from '../providers/sharedservice/sharedservice'
     ReturnqrPage,
     ManagePage,
     DetailPage,
-    EditPage
+    EditPage,
+    PairreturnPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     SharedserviceProvider,
-    BarcodeScanner
+    BarcodeScanner,
+    UserserviceProvider
   ]
 })
 export class AppModule {}

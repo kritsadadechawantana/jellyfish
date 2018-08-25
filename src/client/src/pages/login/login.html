@@ -14,8 +14,17 @@
 
 
 <ion-content padding>
-  <div class="text-center col-xs-12">                
-    <button type="button" class="btn btn-primary" (click)="login()">Login</button>
-  </div>
-  
+  <form #itemForm="ngForm">        
+    <div class="text-center">
+      <img src="https://trello-attachments.s3.amazonaws.com/5b80c5a05728c3396a2a3b8c/5b80c8153623ac7fa46a41f4/8163c52b018a2ab2bf8d807c82da3559/Asset_5.png"/>
+    </div> 
+      <div class="form-group">
+          <ion-label color="primary" floating>Username</ion-label>
+          <input type="text" class="form-control" id="username" [(ngModel)]="username" name="username">
+        </div>
+    <div class="text-center">                
+        <button ion-button round (click)="login()">เข้าสู่ระบบ</button>
+    </div>
+</form>
+
 </ion-content>
