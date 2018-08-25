@@ -27,9 +27,9 @@ export class HomePage {
     });
   }
   scan(){this.barcodeScanner.scan().then(barcodeData => {
-    console.log('Barcode data', barcodeData);
-   }).catch(err => {
-       console.log('Error', err);
-   });};
+ console.log('Barcode data', barcodeData);
+}).catch(err => {
+    console.log('Error', err);
+});};
 
 }
